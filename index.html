@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TodoList</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class=" col-3  me-5 ms-4">
+            <ul class="list-group">
+                <li class="list-group-item listTodo">My Todo List</li>
+                <li class="list-group-item addTodo active">Add to TodoList</li>
+
+            </ul>
+
+
+        </nav>
+        <div class="list col-7 p-4 pull-right ">
+            <h1>TodoAdd</h1>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" required onchange="" class="form-control" id="title">
+                </div>
+                <div class="mb-3">
+                    <label for="comment">Description</label>
+                    <textarea required class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <div class="my-3">
+
+                    <label class="form-label">Select Priority</label>
+                    <select class="form-select required" aria-label="Default select example">
+                        <option value="1">High</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Low</option>
+                    </select>
+                </div>
+
+                <div class="my-4">
+                    <label for="comment">Date</label>
+
+                    <input class="form-control required" type="datetime-local" value="2011-08-19T13:45:00"
+                        id="example-datetime-local-input"></input>
+
+                </div>
+                <button type="submit" class="btn btn-outline-danger submit">Add</button>
+            </form>
+
+
+        </div>
+
+        <div class="priority list d-none">
+
+            <div class="high">
+                <h2 class="text-light">High</h2>
+                 <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="highRow">
+                     
+                   
+                    </tbody>
+                </table> 
+            </div>
+            <div class="medium">
+                <h2 class="text-light">Medium</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="mediumRow">
+                     
+                   
+                    </tbody>
+                </table> 
+
+            </div>
+
+            <div class="low">
+                <h2 class="text-light">Low</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="lowRow">
+                     
+                   
+                    </tbody>
+                </table> 
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+
+</body>
+
+</html>

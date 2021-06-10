@@ -1,0 +1,35 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    flex-wrap:initial
+}
+
+.list {
+    padding: 10px;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.439);
+    max-width: 600px;
+}
+
+.container::before {
+    content: '';
+    background: url('../images/alley-89197_1920.jpg') no-repeat center center/cover;
+    position: absolute;
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+}
+
+li:hover{
+    cursor: pointer;
+}
