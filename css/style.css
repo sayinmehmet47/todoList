@@ -6,7 +6,8 @@
     align-items: center;
     color: black;
     font-weight: bold;
-    flex-wrap:initial
+    flex-wrap: wrap;
+    
 }
 
 .list {
