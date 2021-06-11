@@ -1,4 +1,4 @@
-
+import { display } from './display.js';
 
 export var myLibrary = [
   {
@@ -44,10 +44,25 @@ class EditTodo {
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
   };
 
+  removeTodo = () => {
+    document.querySelector('body').addEventListener('click', (e) => {
+      if (e.target.matches('i')) {
+        const tr = e.target.parentElement.parentElement.parentElement.childNodes[3].innerText;
 
+        console.log(tr);
+        const filtered=myLibrary.filter(e=>{
+            return e.title!==tr
 
-
-
+        })
+        myLibrary=filtered
+        console.log(filtered)
+        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+        e.target.parentElement.parentElement.parentElement.remove()
+      }
+    });
+  };
 }
+const ui = new EditTodo();
+ui.removeTodo();
 
 export { EditTodo };
