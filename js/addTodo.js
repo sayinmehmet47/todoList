@@ -42,17 +42,38 @@ class EditTodo {
     this.library=library
   }
   addNewTodo = () => {
-    firstLibrary = [
-      ...firstLibrary,
+      if(this.library===firstLibrary){
+        firstLibrary = [
+          ...firstLibrary,
+    
+          {
+            title: this.title,
+            description: this.description,
+            priority: this.priority,
+            date: this.date,
+          },
+        ];
+        localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
 
-      {
-        title: this.title,
-        description: this.description,
-        priority: this.priority,
-        date: this.date,
-      },
-    ];
-    localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
+
+      }else{
+        secondLibrary = [
+          ...secondLibrary,
+    
+          {
+            title: this.title,
+            description: this.description,
+            priority: this.priority,
+            date: this.date,
+          },
+        ];
+        localStorage.setItem('secondLibrary', JSON.stringify(secondLibrary));
+
+
+
+      }
+
+  
   };
 
   removeTodo = () => {

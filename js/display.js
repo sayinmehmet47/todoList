@@ -3,12 +3,12 @@ const mediumRow = document.querySelector('.mediumRow');
 const lowRow = document.querySelector('.lowRow');
 const priority = document.querySelector('.priority');
 
-const display = () => {
+const display = (library) => {
   priority.classList.remove('d-none');
   highRow.innerHTML = '';
   mediumRow.innerHTML = '';
   lowRow.innerHTML = '';
-
+  console.log(library)
   var firstLibrary = JSON.parse(localStorage.getItem('firstLibrary'));
 
   const High = firstLibrary.filter((e) => {
