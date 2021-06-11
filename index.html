@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>TodoList</title>
 </head>
-
 <body>
-
     <div class="container ">
         <nav class="col-xs-9 me-4 ms-1">
             <ul class="list-group">
@@ -21,8 +18,10 @@
                 <li class="list-group-item addTodo active">Add to TodoList</li>
 
             </ul>
-
-
+            <div class="form-check form-switch shadow" id="switch">
+                <label class="form-check-label " for="flexSwitchCheckChecked">Project</label>
+                <input class="form-check-input bg-warning" type="checkbox" id="check" unchecked="">
+              </div>
         </nav>
         <div class="list mt-2 col-md-6 me-4 p-4 pull-right ">
             <h1>TodoAdd</h1>
@@ -54,15 +53,12 @@
                 </div>
                 <button type="submit" class="btn btn-outline-danger submit">Add</button>
             </form>
-
-
-        </div>
-
+   </div>
         <div class="priority table-responsive  col-md-7  list d-none ">
 
             <div class="high table-responsive">
                 <h2 class="text-light text-dark">High</h2>
-                 <table class="table table-responsive table-success table-striped">
+                <table class="table table-responsive table-success table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -74,10 +70,10 @@
                         </tr>
                     </thead>
                     <tbody class="highRow">
-                     
-                   
+
+
                     </tbody>
-                </table> 
+                </table>
             </div>
             <div class="medium table-responsive">
                 <h2 class="text-dark">Medium</h2>
@@ -93,10 +89,10 @@
                         </tr>
                     </thead>
                     <tbody class="mediumRow">
-                     
-                   
+
+
                     </tbody>
-                </table> 
+                </table>
 
             </div>
 
@@ -114,26 +110,14 @@
                         </tr>
                     </thead>
                     <tbody class="lowRow">
-                     
-                   
+
+
                     </tbody>
-                </table> 
+                </table>
             </div>
 
         </div>
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
     <script type="module" src="./js/index.js"></script>

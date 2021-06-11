@@ -34,11 +34,12 @@ localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
 localStorage.setItem('secondLibrary', JSON.stringify(secondLibrary));
 
 class EditTodo {
-  constructor(title, description, priority, date) {
+  constructor(title, description, priority, date, library) {
     this.title = title;
     this.description = description;
     this.priority = priority;
     this.date = date;
+    this.library=library
   }
   addNewTodo = () => {
     firstLibrary = [
