@@ -14,7 +14,7 @@ const display = () => {
   mediumRow.innerHTML = '';
   lowRow.innerHTML = '';
 
-    if(checkbox.checked){
+    if(!checkbox.checked){
       displayLibrary=JSON.parse(localStorage.getItem('firstLibrary'));
 
     }else{

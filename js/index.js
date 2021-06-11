@@ -38,3 +38,16 @@ e.preventDefault()
 
 });
 
+switches.addEventListener("change",()=>{
+  
+    display()
+    list.classList.add("d-none")
+    listTodo.classList.add('active');
+    addTodo.classList.remove('active');
+
+    let checkbox=document.querySelector("#check")
+    checkbox.checked?document.querySelector(".bank").innerText="Library-2":document.querySelector(".bank").innerText="Library-1"
+   
+
+})
+
