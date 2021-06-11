@@ -30,6 +30,6 @@
 
 }
 
-li:hover{
+li,i:hover{
     cursor: pointer;
 }
