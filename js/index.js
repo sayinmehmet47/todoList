@@ -5,8 +5,8 @@ var inputs = document.querySelector('form').elements;
 const form = document.querySelector('form');
 var title, description, priority, date;
 
-form.addEventListener('submit', () => {
-
+form.addEventListener('submit', (e) => {
+e.preventDefault()
   title = inputs[0].value;
   description = inputs[1].value;
   priority = inputs[2].value;
