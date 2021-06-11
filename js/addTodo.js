@@ -19,6 +19,8 @@ export var myLibrary = [
   },
 ];
 
+localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
 class EditTodo {
   constructor(title, description, priority, date) {
     this.title = title;
