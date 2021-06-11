@@ -26,7 +26,7 @@ e.preventDefault()
     checkbox.checked?library=secondLibrary:library=firstLibrary
     
   let newTodo = new EditTodo(title, description, priority, date,library);
-
+    console.log(newTodo.library)
   newTodo.addNewTodo();
   inputField.forEach((input) => (input.value = ""));
   textField.forEach((input) => (input.value = ""));
