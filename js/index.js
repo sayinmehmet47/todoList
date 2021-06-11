@@ -1,8 +1,13 @@
 import { EditTodo, myLibrary } from './addTodo.js';
 import { display } from './display.js';
 import { navigation } from './nav.js';
-var inputs = document.querySelector('form').elements;
+var inputs = document.querySelector('form').elements
+const list = document.querySelector('.list');
+const listTodo = document.querySelector('.listTodo');
+const addTodo = document.querySelector('.addTodo');
 const form = document.querySelector('form');
+let inputField = document.querySelectorAll("input");
+let textField=document.querySelectorAll("textarea")
 var title, description, priority, date;
 
 form.addEventListener('submit', (e) => {
@@ -18,5 +23,12 @@ e.preventDefault()
     : (priority = 'Low');
   let newTodo = new EditTodo(title, description, priority, date);
   newTodo.addNewTodo();
+  inputField.forEach((input) => (input.value = ""));
+  textField.forEach((input) => (input.value = ""));
+  display()
+  list.classList.add("d-none")
+  listTodo.classList.add('active');
+  addTodo.classList.remove('active');
+
   console.log(myLibrary);
 });
