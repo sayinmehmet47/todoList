@@ -1,4 +1,4 @@
-import { EditTodo, myLibrary } from './addTodo.js';
+import { EditTodo, firstLibrary } from './addTodo.js';
 import { display } from './display.js';
 import { navigation } from './nav.js';
 var inputs = document.querySelector('form').elements
@@ -30,5 +30,5 @@ e.preventDefault()
   listTodo.classList.add('active');
   addTodo.classList.remove('active');
 
-  console.log(myLibrary);
+  console.log(firstLibrary);
 });

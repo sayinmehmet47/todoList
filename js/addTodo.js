@@ -1,6 +1,6 @@
 import { display } from './display.js';
 
-export var myLibrary = [
+export var firstLibrary = [
   {
     title: 'my password',
     description: 'Aa213',
@@ -20,8 +20,18 @@ export var myLibrary = [
     date: '2011-08-19T13:45:00',
   },
 ];
+export var secondLibrary = [
+  {
+    title: 'telefonumun markasi',
+    description: 'Iphone 7',
+    priority: 'High',
+    date: '2011-08-19T13:45:00',
+  },
+ 
+];
 
-localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
+localStorage.setItem('secondLibrary', JSON.stringify(secondLibrary));
 
 class EditTodo {
   constructor(title, description, priority, date) {
@@ -31,8 +41,8 @@ class EditTodo {
     this.date = date;
   }
   addNewTodo = () => {
-    myLibrary = [
-      ...myLibrary,
+    firstLibrary = [
+      ...firstLibrary,
 
       {
         title: this.title,
@@ -41,7 +51,7 @@ class EditTodo {
         date: this.date,
       },
     ];
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+    localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
   };
 
   removeTodo = () => {
@@ -50,13 +60,13 @@ class EditTodo {
         const tr = e.target.parentElement.parentElement.parentElement.childNodes[3].innerText;
 
         console.log(tr);
-        const filtered=myLibrary.filter(e=>{
+        const filtered=firstLibrary.filter(e=>{
             return e.title!==tr
 
         })
-        myLibrary=filtered
+        firstLibrary=filtered
         console.log(filtered)
-        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+        localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
         e.target.parentElement.parentElement.parentElement.remove()
       }
     });

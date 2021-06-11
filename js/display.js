@@ -9,15 +9,15 @@ const display = () => {
   mediumRow.innerHTML = '';
   lowRow.innerHTML = '';
 
-  var myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+  var firstLibrary = JSON.parse(localStorage.getItem('firstLibrary'));
 
-  const High = myLibrary.filter((e) => {
+  const High = firstLibrary.filter((e) => {
     return e.priority === 'High';
   });
-  const Medium = myLibrary.filter((e) => {
+  const Medium = firstLibrary.filter((e) => {
     return e.priority === 'Medium';
   });
-  const Low = myLibrary.filter((e) => {
+  const Low = firstLibrary.filter((e) => {
     return e.priority === 'Low';
   });
 
