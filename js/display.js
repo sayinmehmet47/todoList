@@ -1,23 +1,36 @@
+import { firstLibrary } from "./addTodo.js";
+
 const highRow = document.querySelector('.highRow');
 const mediumRow = document.querySelector('.mediumRow');
 const lowRow = document.querySelector('.lowRow');
 const priority = document.querySelector('.priority');
+let checkbox=document.querySelector("#check")
 
-const display = (library) => {
+let displayLibrary;
+
+const display = () => {
   priority.classList.remove('d-none');
   highRow.innerHTML = '';
   mediumRow.innerHTML = '';
   lowRow.innerHTML = '';
-  console.log(library)
-  var firstLibrary = JSON.parse(localStorage.getItem('firstLibrary'));
 
-  const High = firstLibrary.filter((e) => {
+    if(checkbox.checked){
+      displayLibrary=JSON.parse(localStorage.getItem('firstLibrary'));
+
+    }else{
+      displayLibrary=JSON.parse(localStorage.getItem('secondLibrary'));
+
+
+    }
+
+
+  const High = displayLibrary.filter((e) => {
     return e.priority === 'High';
   });
-  const Medium = firstLibrary.filter((e) => {
+  const Medium = displayLibrary.filter((e) => {
     return e.priority === 'Medium';
   });
-  const Low = firstLibrary.filter((e) => {
+  const Low = displayLibrary.filter((e) => {
     return e.priority === 'Low';
   });
 
