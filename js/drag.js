@@ -21,7 +21,7 @@ const Drag = () => {
       const drag = new EditTodo(title, description, priority, date, library);
       
       drag.addNewTodo()
-      drag.changeDrop(title,priority)
+      drag.changeDrop(title,priority,library)
       element.classList.remove('dragging');
     });
   });
