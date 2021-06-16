@@ -1,4 +1,5 @@
 import { firstLibrary } from "./addTodo.js";
+import { Drag } from "./drag.js";
 
 const highRow = document.querySelector('.highRow');
 const mediumRow = document.querySelector('.mediumRow');
@@ -7,7 +8,6 @@ const priority = document.querySelector('.priority');
 let checkbox=document.querySelector("#check")
 
 let displayLibrary;
-
 const display = () => {
   priority.classList.remove('d-none');
   highRow.innerHTML = '';
@@ -36,7 +36,11 @@ const display = () => {
 
   High.map((element, index) => {
     const highTable = document.createElement('tr');
+    highTable.setAttribute('draggable', true);
+
+    highTable.classList.add("draggable")
     highTable.innerHTML = `
+    
             <th scope="row">${index+1}</th>
             <td>${element.title}</td>
             <td>${element.description}</td>
@@ -52,10 +56,14 @@ const display = () => {
         
     `;
     highRow.appendChild(highTable);
+    Drag()
   });
 
   Medium.map((element, index) => {
     const mediumTable = document.createElement('tr');
+    mediumTable.setAttribute('draggable', true);
+
+    mediumTable.classList.add("draggable")
     mediumTable.innerHTML = `
             <th scope="row">${index+1}</th>
             <td>${element.title}</td>
@@ -70,10 +78,15 @@ const display = () => {
             </td>
     `;
     mediumRow.appendChild(mediumTable);
+    Drag()
+
   });
 
   Low.map((element, index) => {
     const lowTable = document.createElement('tr');
+    lowTable.setAttribute('draggable', true);
+
+    lowTable.classList.add("draggable")
     lowTable.innerHTML = `
             <th scope="row">${index+1}</th>
             <td>${element.title}</td>
@@ -88,6 +101,8 @@ const display = () => {
             </td>
     `;
     lowRow.appendChild(lowTable);
+    Drag()
+
   });
 };
 

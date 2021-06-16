@@ -1,6 +1,6 @@
 import { display } from './display.js';
 
-export var firstLibrary = [
+ let firstLibrary = [
   {
     title: 'my first-library',
     description: 'Aa213',
@@ -20,7 +20,8 @@ export var firstLibrary = [
     date: '2011-08-19T13:45:00',
   },
 ];
-export var secondLibrary = [
+export {firstLibrary}
+ let secondLibrary = [
   {
     title: 'second-library',
     description: 'Iphone 7',
@@ -28,6 +29,7 @@ export var secondLibrary = [
     date: '2011-08-19T13:45:00',
   },
 ];
+export {secondLibrary}
 
 localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
 localStorage.setItem('secondLibrary', JSON.stringify(secondLibrary));
@@ -41,6 +43,7 @@ class EditTodo {
     this.library = library;
   }
   addNewTodo = () => {
+
     if (this.library === firstLibrary) {
       firstLibrary = [
         ...firstLibrary,
@@ -68,8 +71,26 @@ class EditTodo {
     }
   };
 
+  changeDrop=(title,priority)=>{
+    const filteredFirstLibrary=firstLibrary.filter(e=>{
+        return !(e.title===title&&e.priority!==priority)
+    })
+    firstLibrary=[...filteredFirstLibrary]
+
+    console.log(firstLibrary)
+    console.log(filteredFirstLibrary)
+    localStorage.setItem('firstLibrary', JSON.stringify(firstLibrary));
+
+   
+  
+
+  }
+
+ 
+
   removeTodo = () => {
     document.querySelector('body').addEventListener('click', (e) => {
+
       if (e.target.matches('i')) {
         const tr =
           e.target.parentElement.parentElement.parentElement.childNodes[3]

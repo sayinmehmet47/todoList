@@ -34,3 +34,7 @@
 li,i:hover{
     cursor: pointer;
 }
+
+.dragging{
+color: red !important
+}
