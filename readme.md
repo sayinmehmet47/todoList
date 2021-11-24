@@ -2,7 +2,7 @@
 
 # About
  - [x] This todo list have two libraries
- - [x] You can save your todos base on your priorities.
+ - [x] You can save your todos base on your priorities and date.
  - [x] You can drag and drop your todos
  - [x] Also you can delete todos that exist.
 
